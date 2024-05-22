@@ -47,4 +47,5 @@ echo "SECRET_VALUE" | gcloud secrets create SECRET_NAME \
 - Accessing Secrets: https://cloud.google.com/run/docs/configuring/services/secrets#access-secret
 - Adding Secret: https://cloud.google.com/secret-manager/docs/create-secret-quickstart#secretmanager-quickstart-gcloud
   - `gcloud secrets create`: https://cloud.google.com/sdk/gcloud/reference/secrets/create
+  - add new version: https://cloud.google.com/secret-manager/docs/add-secret-version
 - Secrets Manager: https://console.cloud.google.com/security/secret-manager
