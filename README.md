@@ -38,12 +38,13 @@ echo "SECRET_VALUE" | gcloud secrets create SECRET_NAME \
 --replication-policy="automatic" \
 --data-file=-
 ```
-2. Add secret access permissions for xxxxxxxxxxxx-compute@developer.gserviceaccount.com. See https://cloud.google.com/run/docs/configuring/services/secrets#access-secret
+2. Add secret access permissions for xxxxxxxxxxxx-compute@developer.gserviceaccount.com. See https://cloud.google.com/secret-manager/docs/manage-access-to-secrets#secretmanager-create-secret-console
 3. When deploying, add `--update-secrets=ENV_VAR_NAME=SECRET_NAME:VERSION`.
   - Note: for some reason `ENV_VAR_NAME` will get a "\n" appended to it, so might need to strip it when using it in code.
 
 ### Secrets References
 - Configuring Secrets in GCR: https://cloud.google.com/run/docs/configuring/services/secrets#command-line
+- Accessing Secrets: https://cloud.google.com/run/docs/configuring/services/secrets#access-secret
 - Adding Secret: https://cloud.google.com/secret-manager/docs/create-secret-quickstart#secretmanager-quickstart-gcloud
   - `gcloud secrets create`: https://cloud.google.com/sdk/gcloud/reference/secrets/create
 - Secrets Manager: https://console.cloud.google.com/security/secret-manager
