@@ -34,7 +34,7 @@ curl -X POST $URL/api/hello  # Should return {"message":"Hello World!"}
 ### Create Secret
 1. In terminal:
 ```bash
-echo "SECRET_VALUE" | gcloud secrets create SECRET_NAME \
+echo -n "SECRET_VALUE" | gcloud secrets create SECRET_NAME \
 --replication-policy="automatic" \
 --data-file=-
 ```
